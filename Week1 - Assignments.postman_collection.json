@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "117d5ee8-e6cc-40e4-90b7-9df87bc50086",
+		"name": "Week1 - Assignments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?JQL=project=\"AP\"",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "allissues",
+							"disabled": true
+						},
+						{
+							"key": "JQL",
+							"value": "project=\"AP\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Issues - 24 hours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?JQL=project=AP%26created>=-24h",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "JQL",
+							"value": "project=AP%26created>=-24h"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "9Eu8M9bNE8GKmLP3zEAb3C7D",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "RestAPIJira@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
